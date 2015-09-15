@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Новая вкладка</title>
+    <link type="text/css" href="css/scrollbar.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    <link type="text/css" href="css/dial.css" rel="stylesheet"/> 
+</head>
+<body>
+
+    <div class="ttdv hide">
+        <button class="spoil"> spoil </button>  
+        <button class="reset"> reset </button>  
+    </div>
+    
+    <ul class="tabs">
+        <li class="tabs__item x_tabs__item_active" data-index="0">
+            <span class="tabs__button">Новости</span>
+        </li>
+        <li class="tabs__item" data-index="1">
+            <span class="tabs__button">Рекомендации</span>
+        </li>
+        <li class="tabs__item" data-index="2">
+            <span class="tabs__button">Сайты</span>
+        </li>        
+    </ul>
+
+    <b class="navigation navigation_next"></b>
+
+    <div class="slides">
+        <ul class="slides__list">
+            <li class="slides__item slides__item_first">
+                <div class="slides__inner full">
+                    <div class="full trimw">
+                        <iframe style="position: relative; overflow: hidden;" class="scrolly" seamless data-topic="news" src="http://head.parser.dev.rambler.ru/speed-dial/news"></iframe>
+                    </div>
+                </div>                   
+            </li>
+            <li class="slides__item slides__item_second">
+                <div class="slides__inner full">
+                    <div class="full trimw">
+                        <iframe style="position: relative;" class="scrolly" seamless data-topic="recommendations" src="http://head.parser.dev.rambler.ru/speed-dial/recommendations"></iframe>      
+                    </div>
+                </div>                   
+            </li>
+            <li class="slides__item slides__item_third">
+                <div class="slides__inner thumbs scrolly">
+                    <div class="table">
+                        <div class="dials">
+                            <div class="cell">
+                                <div class="speedzone">
+                                    <span class="note">Уменьшенное изображение удалено:
+                                        <span class="note_cancel">Отменить</span>
+                                        <span class="note_reestabl_all">Восстановить все</span>
+                                        <div class="note_close" title="Не показывать"></div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </li>
+        </ul>
+    </div>
+
+    <b class="navigation navigation_prev"></b>
+
+    
+    <script src="js/zepto.min.js"></script>
+    <script src="js/hash.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/dial.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/analitics.js"></script>
+</body>
+</html>

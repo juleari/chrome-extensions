@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "default_locale": "en",
+  "name": "__MSG_name__",
+  "chrome_url_overrides" : {
+    "newtab": "dial.html"
+  },
+  "version": "8.0.0",
+  "description": "__MSG_description__",
+  "icons": {
+    "19": "icons/rambler19.png",
+    "48": "icons/rambler48.png",
+    "128": "icons/rambler128.png"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "permissions": [
+    "history", "bookmarks", "tabs", "<all_urls>",
+    "background", "storage", "unlimitedStorage", "contextMenus", "management", "notifications",
+    "webNavigation", "webRequest", "*://*.rambler.ru/*", "topSites", "chrome://favicon/"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": ["gfx/logo.gif"]
+}

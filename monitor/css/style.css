@@ -1,0 +1,319 @@
+html,
+body {
+    height: 100%;
+    overflow:hidden;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-user-select:none;
+    user-select:none;
+}
+body {
+    color:#333;
+    font-family:Arial, sans-serif;
+    background:#fff;
+    padding:0;
+    margin:0;
+}
+
+iframe.stage {
+    width: inherit; 
+    height: inherit;
+}
+
+/*
+    --------
+    ========
+    CONTROLS
+    ========
+    --------
+*/
+.tabs {
+    line-height:75px;
+    text-align:center;
+    list-style:none;
+    width:100%;
+    height:75px;
+    display:block;
+    overflow:hidden;
+    background:#eee;
+    padding:0;
+    margin:0;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:20;
+}
+.tabs:after {
+    content:'';
+    width:100%;
+    height:1px;
+    display:block;
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:-1px;
+    left:0;
+
+    box-shadow:0 0 4px #aaa;
+}
+.tabs__item {
+    color:#ababab;
+    font-size:16px;
+    display:inline-block;
+    vertical-align:top;
+    padding:0;
+    margin:0 23px;
+}
+.tabs__item_active {
+    color:#333;
+}
+.tabs__button {
+    cursor:pointer;
+}
+
+
+
+/*
+    ------
+    ======
+    SLIDES
+    ======
+    ------
+*/
+.slides {
+    width:100%;
+    display:block;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:75px;
+    z-index:9;
+}
+.slides__list {
+    list-style:none;
+    width:100%;
+    height:100%;
+    display:block;
+    padding:0;
+    margin:0;
+    position:relative;
+    left:0;
+}
+.slides__list_transition {
+    -webkit-transition:left .3s ease-out;
+    transition:left .3s ease-out;
+}
+.slides__item {
+    width:100%;
+    height:100%;
+    display:block;
+    overflow:hidden;
+    overflow-y: auto; 
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:0;
+}
+.slides__item_first {
+    left:0;
+}
+.slides__item_second {
+    left:100%;
+}
+.slides__item_third {
+    left:200%;
+}
+.slides__inner {
+    height:100%;
+    display:block;
+    padding:0;
+    margin:0 48px;
+}
+
+
+
+/*
+    ------
+    ======
+    SLIDES
+    ======
+    ------
+*/
+.navigation {
+    width:48px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+    position:absolute;
+    top:0;
+    bottom:75px;
+    z-index:10;
+}
+@media screen and (min-width: 1500px) {
+    .navigation {
+        width: 5%;
+    }
+}
+.navigation_prev {
+    left:0;
+}
+.navigation_next {
+    right:0;
+}
+.navigation:before {
+    content:'';
+    width:40px;
+    height:100%;
+    display:none;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    box-shadow:0 0 48px 2px #888;
+}
+.navigation_prev:before {
+    border-radius:0 40px 40px 0;
+    left:-40px;
+}
+.navigation_next:before {
+    border-radius:40px 0 0 40px;
+    right:-40px;
+}
+.navigation:hover:before {
+    display:block !important;
+}
+.navigation:after {
+    content:'';
+    width:13px;
+    height:21px;
+    display:block;
+    overflow:hidden;
+    position:absolute;
+    background:#adf;
+    top:50%;
+    left:50%;
+}
+.navigation_prev:after {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAVCAYAAACdbmSKAAABlklEQVQ4T42TsUvDQBjFezUxEQpCwUYwCJ0UAm2TgCDoolgsdhIFQRRd7B/kpChOuigVRVEExcFJTGIQXJ0EuwiCIJQ08V25K7EkNgfhQvJ+ed+97wtJJVwlrGcsKidJGMMwtqHbCoJg1XGck15QH4A9QsgG/Tigpud547GQpmn9siwfQrvEqwFUs217NxJSVXVAUZRjiBcY0MK+blnWUeSZ4JCRJOkMJc3wkrCvwOGUO/5xApAFcAFgkgl+UNIigOtwYB1I1/WhdDp9g5cl5vANuIKSHroTbkPFYnFEEIRb3I4xwSdSqriu+xjVElIoFPKiKFIgzwQf2MtweInrIUEfnlCGGRJUAVz+13TudA/RKHfyfX8WnX+NdaIvTNOkAA2hcyakVkZqVuSZ+EPEPYwJuOLpYf/CRUuNTi8EZhk4EepTFY53kX0KgRkGTrF+NVHqMs54zjWxs5fL5epIdZ6DuN+Mnb2QY/eUt5BqDY77Sf6nA7issY+9NRoNrRfU1mIAdgDOYbSmMVrviSDWy0GcibYh9Qt6/6Ie4wuBUAAAAABJRU5ErkJggg==) no-repeat 0 0;
+    margin-left:-6px;
+}
+.navigation_next:after {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAVCAYAAACdbmSKAAABlElEQVQ4T42TzysEYRjHzc6kttSWyyh72avDjJkpJwdRGxFRSpxEnPxBXIiLIi60onWhlJr9kaa4bqPsKqWUGTtmfd/tGb2Yd9ZT0/u8876fnl/fV+oiG4RVYNE+aZXYoWmas1j28W2VSqWNTqCkaVpOUZR7SZK62eVWq7UDcBXupwiOIq0B2uQuHXqet+Q4zkcc2IaYWZa1iGUXn0y/Tuv1+rzruu+/wW+Ir41L9dL3/RlEfOPBHxCB44CO4KepxhuAUwBfIvAPRKkOoyEFwD10sRKGYb5cLj+zfSzEDnRdH0JXC3B7CXwIgmCsWq0+CiF2kQ1clmUG9hFYazabI4kQpTqJ9SSqB2nbiZBhGAOpVKr470iQloVGnPM1wc/btl0Tdo9SylBad1BIHm1/iu0eIowiAquhPSfYLYAJ4ZxQwzSAg0gRAK4JiFcE0x46s81J6KzRaMwJtYcIK+gSU3lbrICPIZ0Focqz2WxaVVUHd3ME7OE9LcNPfk+QTD8kc4UIFwDWo0GKVv49ZTCD104AO/8CRZeyzvGS+58AAAAASUVORK5CYII=) no-repeat 0 0;
+    margin-left:-7px;
+}
+.navigation_disable {
+    cursor: default;
+}
+.navigation_disable:hover:before {
+    box-shadow: none;
+}
+.navigation_disable:after {
+    background: none !important;
+}
+.thumbs {
+	position: relative; 
+	z-index: 15;
+ 	margin: 0 50px;
+}
+
+.thumbs div {
+	padding: 3px 8px;
+	line-height: 1.5em;
+}
+
+.tile-caption {
+	padding-left: 5px;
+	right: 50px;
+}
+
+.tile-pad {
+	position: relative; 
+	background: #f0f0f0; 
+	width: 240px;
+	height: 180px; 
+}
+.tile-image {
+	position: absolute;
+	top: 16px;
+	right: 16px; 
+	max-width: 240px;
+	max-height: 180px;
+}
+.tile-icon {
+	position: absolute;
+	bottom: 16px;
+	left: 16px; 
+}
+
+.hide, .hidden {
+	display: none;
+} 
+
+.scrolly::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+.white::-webkit-scrollbar {
+    visibility: none;
+}
+
+@media (min-height: 520px) and (min-width: 1196px) {
+    .slides__item_third .scrolly::-webkit-scrollbar {
+        width: 0px!important;
+    }
+}
+
+.scrolly::-webkit-scrollbar:hover {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.scrolly {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.trimw {
+	right: 48px !important;
+}
+
+.full {
+	width: 100%;
+	height: 100%;
+	position: absolute; 
+	margin-left: 0;	
+}
+
+.g-title {
+    font-size: .9em;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-height: 18px;
+    margin-left: 0;
+}
+
+.ttdv {
+	position: absolute; 
+	bottom: 120px; 
+	right: 50px;
+	width: 8em;
+	height: 2em; 
+	z-index:50;
+}
+.table {
+    display: table;
+    width: 100%;
+}
+.cell {
+    vertical-align: middle;
+    padding: 0px !important;
+    display: table-cell;
+}
+iframe[data-topic] {
+    height: 100%;
+    margin-left: 80px;
+    border: none;
+}

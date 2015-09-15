@@ -1,0 +1,174 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.dials {
+	max-width: 1190px;
+	margin: 0 auto;
+	display: table-row;
+}
+.speedzone {
+	min-width: 212px;
+	margin: auto;
+	text-align: left;
+}
+@media (min-width: 1201px) {
+    .speedzone {
+        max-width: 1064px;
+    }
+}
+@media (min-width: 937px) and (max-width: 1200px) {
+    .speedzone {
+        max-width: 798px;
+    }
+}
+@media (min-width: 671px) and (max-width: 936px) {
+    .speedzone {
+        max-width: 532px;
+    }
+}
+@media (max-width: 670px){
+    .speedzone {
+        max-width: 266px;
+    }
+    .note span {
+    	float: left;
+    }
+    .note .note_cancel {
+    	padding: 0;
+    }
+    .note_close {
+    	float: right;
+    	right: 23px;
+    	left: inherit!important;
+    }
+    .note {
+    	min-width: 266px!important;
+    }
+}
+.speedzone a.link {
+	text-decoration: none;
+}
+	.speeddial {
+		display: inline-block;
+		position: relative;
+		width: 230px;
+		height: 170px;
+		padding: 17px 18px 16px !important;
+	}
+
+		.speeddial_screen {
+			position: absolute;
+			min-width: 212px;
+			width: 212px;
+			min-height: 162px;
+			height: 162px;
+			border: 1px solid #eee;
+
+			background-size: 100% !important;
+		}
+
+		.speeddial_screen:hover {
+			border-color:#94d9ff;
+			-webkit-box-shadow: 0 0 10px #94d9ff;
+			-moz-box-shadow: 0 0 10px #94d9ff;
+			box-shadow: 0 0 10px #94d9ff;
+			text-decoration: none;
+			-webkit-transition: box-shadow .1s;
+			-moz-transition: box-shadow .1s;
+			transition: box-shadow .1s;
+		}
+
+		.speeddial_title {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			
+			line-height: 33px;
+			width: 100%;
+			padding: 3px 0!important;
+
+			font-family: Arial;
+			text-align: left;
+		}
+		.speeddial_title_under {
+			background: white;
+			opacity: .85;
+			height: 24px;
+		}
+		.g-icon {
+			position: relative;
+			float: left;
+			top: 5px;
+			left: 8px;
+			margin-right: 5px;
+
+			width: 16px;
+			height: 16px;
+			
+			background-repeat: no-repeat;
+		}
+.load {
+	 background-image: url(gfx/loader.gif); 
+	 background-repeat:no-repeat; 
+	 background-position:center center;
+}
+.resize {
+	-webkit-transition:opacity 1s ease-in-out;
+}
+
+.close {
+	-webkit-transition: opacity 500ms ease-in-out;
+	opacity: 0;
+	background-image: url(close.png);
+	width: 15px;
+	height: 15px;
+	padding: 0!important;
+	position: absolute;
+	right: 23px;
+	top: 22px;
+	z-index: 5;
+	cursor: pointer;
+}
+.close:hover {
+	background-position-y: -15px; 
+}
+.speeddial:hover .close {
+	-webkit-transition-delay: 500ms;
+	opacity: 1;
+}
+.link {
+	cursor: pointer;
+}
+.note {
+    font-size: 14px;
+    font-family: Arial;
+    color: #939393;
+    padding: 0 20px;
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease-in-out;
+    display: block;
+    min-width: 505px;
+    max-width: 505px;
+}
+.note span {
+    color: #0057cf;
+    padding: 0 0px 0 21px;
+    cursor: pointer;
+}
+.note_close {
+    background-image: url(close.png);
+	background-position-y: -30px;
+    display: inline-block;
+    width: 15px;
+	height: 15px;
+	padding: 0!important;
+	position: relative;
+    top: 3px;
+    left: 21px;
+    cursor: pointer;
+}
+.note_close:hover {
+    background-position-y: -45px;
+}

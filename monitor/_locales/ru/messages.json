@@ -1,0 +1,14 @@
+﻿{
+    "name": {
+        "message": "Рамблер-Монитор"
+    },
+    "description": {
+        "message": "Новости дня и рекомендации - не пропустите ничего важного."
+    },
+    "title": {
+        "message": "Рамблер-Монитор"
+    },
+    "templateChannel": {
+        "message": "rdial:template"
+    }
+}
