@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "Будильник",
+  "icons": {
+    "19": "icons/clock19.png",
+    "48": "icons/clock48.png",
+    "128": "icons/clock128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/clock19.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "permissions": [
+    "notifications",
+    "tabs",
+    "cookies"
+  ]
+}
