@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="css/authorize.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    <style>
+        .b-domain_block{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="extauth" class="b-auth--container m--modal" style="display: block;">
+        <div class="b-wid-error">
+            Ошибка связи.<br />
+            Проверьте подключение<br />
+            к интернету<br />
+            <button class="g-btn">Обновить</button>
+        </div>
+        
+        <div class="b-auth--header">
+            <a href="#" title="Закрыть" class="b-auth--cancel"></a>
+            <h1 class="b-auth--title">Войти</h1>
+        </div>
+        <div class="b-profile">
+
+            <div class="b-profile--form m-login--form m-label_offcet_auth">
+                <label for="login" class="b-profile--label">Логин:</label>
+                <ul id="js-domain" class="r--group_menu r--group_menu_f18 b-domain">
+                
+                    <li class="r--group_menu_item">
+                        <a class="r--option_value r--option__active" href="#" data-value="rambler.ru">@rambler.ru</a>
+                    </li>
+                    <li class="r--group_menu_item">
+                        <a class="r--option_value " href="#" data-value="lenta.ru">@lenta.ru</a>
+                    </li>
+                    <li class="r--group_menu_item">
+                        <a class="r--option_value " href="#" data-value="autorambler.ru">@autorambler.ru</a>
+                    </li>
+                    <li class="r--group_menu_item">
+                        <a class="r--option_value " href="#" data-value="myrambler.ru">@myrambler.ru</a>
+                    </li>
+                    <li class="r--group_menu_item">
+                        <a class="r--option_value " href="#" data-value="ro.ru">@ro.ru</a>
+                    </li>
+                    <li class="r--group_menu_item">
+                        <a class="r--option_value " href="#" data-value="r0.ru">@r0.ru</a>
+                    </li>
+                </ul>
+                <div class="r--group r--input_w390 r--size_h36">
+                    <input id="login" class="r--input_inner r--input_w210 r--size_h36" type="text" maxlength="64" tabindex="1">
+                    <a id="select-domain" class="b-domain r--group_inner r--input_w200 r--button_h36 r--group_menu_f18" href="#" draggable="false" tabindex="2"><b id="select-domain-name" class="r--dropdown_text">@rambler.ru</b><b class="r--dropdown_control"></b><i class="r--dropdown_arrow_down"></i></a>
+                    
+                </div>
+            </div>
+
+            <div class="b-profile--form m-login--form m-label_offcet_auth">
+                <label for="password" class="b-profile--label"><a id="PasswordRemindHREF" class="b-profile--reminder" href="http://id.rambler.ru/password/remind/?back=http%3A%2F%2Fwww.rambler.ru%2F&amp;rname=main" title="Напомнить забытый пароль" target="_blank">Забыли пароль?</a><span id="password-label">Пароль</span></label>
+                <input id="password" class="r--input r--size_h36 r--input_w390 " type="password" name="profile.password" maxlength="64" name="profile.login" tabindex="1">
+            </div>
+
+            <div class="b-profile--form">
+                <input type="checkbox" id="long-session" class="b-profile--label_input" name="profile.long_session" tabindex="1">
+                <label for="long-session" class="b-profile--label_session" title="Не спрашивать пароль следующие две недели">Запомнить меня</label>
+            </div>
+
+            <div class="b-profile--form">
+                <div class="b-profile--register">Нет аккаунта?<br><a id="ProfileCreateHREF" href="http://id.rambler.ru/profile/create/?back=http%3A%2F%2Fwww.rambler.ru%2F&amp;rname=main" target="_blank" title="Завести аккаунт на Рамблере">Зарегистрироваться</a></div>
+               
+                <span class="r--button r--button_h36 r--input_w160" title="Войти" draggable="false">Войти<input class="r--button_invisible" name="button.submit" type="submit" value="" tabindex="1"></span>
+
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/checkform.js"></script>
+    <script type="text/javascript" src="js/authorization.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body {
+	margin:0;
+	padding:0;
+	-webkit-user-select: none;
+	user-select:none;
+}
+
+.options {
+	margin: 45px auto;
+	width: 690px;
+	
+	background-color: #f5f5f5;
+    color:#333;
+    
+    font-size: 13px;
+    font-family:'Arial';
+}
+
+	h2 {
+	    display: block;
+
+	    font-family: 'Helvetica Neue';
+	    font-weight: normal;
+	    font-size: 27px;
+	}
+
+	.b-notify {
+		display: block;
+		height: 60px;
+		margin-bottom: 50px;
+
+		background-color: #ffffff;
+	}
+
+		.b-notify__control {
+			display: inline-block;
+			vertical-align: middle;
+		}
+			.notify__control {
+				position: relative;
+				display: block;
+				width: 28px;
+				height: 16px;
+				margin: 22px 16px;
+
+				border-bottom: 1px solid #fff;
+				border-radius: 8px;
+				box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.4);
+				font-size: 0;
+				line-height: 0;
+				cursor: pointer;
+				background-color: #b5b5b5;
+			}
+			.notify__control_on {
+				background-color: #b9e07b;
+			}
+			.notify__control_transition {
+				-webkit-transition: background .15s ease-in-out;
+				-moz-transition: background .15s ease-in-out;
+				-ms-transition: background .15s ease-in-out;
+				-o-transition: background .15s ease-in-out;
+				transition: background .15s ease-in-out;
+			}
+
+				.notify__stick {
+					position: absolute;
+					display: block;
+					margin: 2px;
+					width: 12px;
+					height: 11px;
+					
+					border-top: 1px solid #fff;
+					border-radius: 8px;
+					background: #e6e6e6;
+					background: -moz-linear-gradient(top,rgba(227,227,227,1) 0,rgba(255,255,255,1) 100%);
+					background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(227,227,227,1)),color-stop(100%,rgba(255,255,255,1)));
+					background: -webkit-linear-gradient(top,rgba(227,227,227,1) 0,rgba(255,255,255,1) 100%);
+					background: -o-linear-gradient(top,rgba(227,227,227,1) 0,rgba(255,255,255,1) 100%);
+					background: -ms-linear-gradient(top,rgba(227,227,227,1) 0,rgba(255,255,255,1) 100%);
+					background: linear-gradient(top,rgba(227,227,227,1) 0,rgba(255,255,255,1) 100%);
+					box-shadow: 0 1px 1px 0 rgba(0,0,0,.25);
+				}
+				.notify__control_on .notify__stick {
+					left: 12px;
+				}
+				.notify__control_transition .notify__stick {
+					-webkit-transition: left .15s ease-in-out;
+					-moz-transition: left .15s ease-in-out;
+					-ms-transition: left .15s ease-in-out;
+					-o-transition: left .15s ease-in-out;
+					transition: left .15s ease-in-out;
+				}
+
+		.notify__text {
+			display: inline-block;
+		}
+	.other__accounts {
+		margin-top: 20px;
+	}
+		.account {
+			position: relative;
+			display: inline-block;
+			margin: 0 7px 18px 0;
+			width: 160px;
+			height: 100px;
+
+			border: 1px solid #e3e3e3;
+			background-color: #fff;
+			box-shadow: 0 1px 2px -2px rgba(0,0,0,.25);
+			vertical-align: top;
+			line-height: 95px;
+			color: #444;
+			text-decoration: none;
+		}
+		.account_other {
+			background: #fff url('load.png') 0 0 repeat-y;
+			line-height: 110px;
+		}
+			.account__icon {
+				display: inline-block;
+				margin: 0 15px;
+				width: 130px;
+				background-image: url('accounts.png');
+				background-repeat: no-repeat;
+				vertical-align: middle;
+			}
+				.account_rmail .account__icon {
+					height: 50px;
+					background-position: 50% 0;			
+				}
+				.account_gmail .account__icon {
+					height: 50px;
+					background-position: 50% -50px;
+				}
+				.account_yandex .account__icon {
+					height: 60px;
+					background-position: 50% -100px;
+				}
+				.account_mail .account__icon {
+					height: 35px;
+					background-position: 50% -160px;
+				}
+				.account_hotmail .account__icon {
+					height: 35px;
+					background-position: 50% -220px;
+				}
+				.account_qip .account__icon {
+					height: 30px;
+					background-position: 0 -256px;
+				}
+				.account_other .account__icon {
+					background: #fff;
+					line-height: 110px;
+
+					color: #848484;
+					vertical-align: baseline;
+					text-align: center;
+					font-weight: bold;
+					font-size: 11px;
+					line-height: 15px;
+				}
+
+			.account__text {
+				position: absolute;
+				bottom: 5px;
+				left: 0;
+				width: 160px;
+				
+				visibility: hidden;
+				text-align: center;
+				font-size: 11px;
+				line-height: 15px;
+			}
+			.account:hover .account__text {
+				visibility: visible;
+			};

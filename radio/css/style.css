@@ -1,0 +1,336 @@
+﻿body{
+    margin: 0;
+}
+a {
+    text-decoration:none;
+	outline:none;
+    color:#333;
+}
+a:hover {
+    color:#3f7fef;
+}
+.b-wid {
+    background:#fff;
+    font-size:15px;
+    font-family:'Helvetica';
+    width:100%;
+    color:#333;
+    position:relative;
+    -webkit-user-select: none;
+
+    /*positioning*/
+    margin:0 auto;
+    max-width:320px;
+    min-width:320px;
+}
+.g-btn {
+    line-height:25px;
+    font-size:13px;
+    font-family:'Arial';
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    display:inline;
+    font-weight:bold;
+    text-shadow:0 1px 0 #fff;
+    padding:0 14px;
+    border:1px solid #b2b2b2;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -webkit-box-shadow:0 1px 4px 0 rgba(0,0,0,.2);
+    box-shadow:0 1px 4px 0 rgba(0,0,0,.2);    
+    background-color:#fafafb;
+    background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fafafb), to(#e8e8e9));
+    background-image:-webkit-linear-gradient(top, #fafafb, #e8e8e9);
+    background-image:linear-gradient(to bottom, #fafafb, #e8e8e9);
+    background-repeat:repeat-x;
+    filter:progid:dximagetransform.microsoft.gradient(startColorstr='#fffafafb', endColorstr='#ffe8e8e9', GradientType=0);
+}
+.g-icn {
+    display:block;
+    width:17px;
+    height:15px;
+    background:url("icns.png") no-repeat;
+}/*---mod---*/
+            .g-icn_star {
+                background-position:-136px 0;
+                width:18px;
+                height:18px;
+            }
+            .g-icn_star:hover {
+                background-position:-136px -53px;
+            }
+            .g-icn_play {
+                background-position:0 -1px;
+                width:12px;
+                height:17px;
+            }
+            .g-icn_detach {
+                width:14px;
+                height:15px;
+                background-position:-262px 0;
+                overflow: hidden;
+            }
+
+    .b-wid__header {
+        padding:0 0 0 17px;
+        background:url("bg.png");
+        height:59px;
+        line-height:59px;
+        position:relative;
+        outline: none;
+    }
+        .b-wid__header_after {
+            content:'';
+            width:100%;
+            background:url("shad.png") no-repeat 50% 0;
+            height:3px;
+            position:absolute;
+            top:59px;
+            left:0;
+            z-index:1;
+			opacity:0;
+			transition:opacity .3s ease-in-out;
+			-webkit-transition:opacity .3s ease-in-out;
+        }
+        .b-wid__title {
+            line-height:59px;
+            margin:0;
+            font-size:19px;
+            font-weight:bold;
+            position:relative;
+        }
+        .b-wid__title:active {
+            top:1px;
+        }
+
+    .b-wid__list {
+        overflow:hidden;
+        position:relative;
+        width:100%;
+        height:376px;
+        outline:none;
+    }
+        .b-wid__ul {
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+            .b-wid__li {
+                height:41px;
+                line-height:41px;
+                padding:0 43px;
+                border-top:1px solid #e8ebef;
+                cursor:pointer;
+                position:relative;
+                
+            }
+				.b-wid__li_playing {
+                    border-top:1px solid #3f7fef;
+                }
+                .b-wid__li_playing  + .b-wid__li {
+                    border-top:1px solid #3f7fef;
+                }
+				.transition{
+					-webkit-transition: height 0.3s ease-in 0s, margin-top 0.5s ease 0s;
+                }
+                .b-wid__li_going {
+					-webkit-transition: margin-top 0.5s ease 0s;
+                    position: absolute;
+                    width: 320px;
+                    border-top: 1px solid #dfdfdf;
+                    border-bottom: 1px solid #dfdfdf;
+                    z-index:100;
+                    background:#fff;
+                }
+                .b-wid__li_going  +.b-wid__li{
+                    border-top: 1px solid #dfdfdf;
+                    background:#fff;
+                }
+                .b-wid__li .g-icn {
+                    position:absolute;
+                }
+                    .b-wid__li .g-icn_play {
+                        display:none;
+                        top:13px;
+                        left:14px;
+                    }
+                    .b-wid__li:hover .g-icn_play:active {
+                        top:14px;
+                    }
+                        .b-wid__li:hover .g-icn_play {
+                            display:block;
+                        }
+                        .b-wid__li:hover .g-icn_play:hover {
+                            background-position:0 -55px;
+                        }
+                        .b-wid__li_playing:hover .g-icn_play:hover{
+                            background-position-y: -82px;
+                        }
+                    .b-wid__li .g-icn_detach {
+                        display:none;
+                        top:0;
+                        right:-29px;
+                    }
+                    .b-wid__li .g-icn_detach:active {
+                        top:1px;
+                    }
+                        .b-wid__li:hover .g-icn_detach {
+                            display:block;
+                        }
+                        .b-wid__li:hover .g-icn_detach:hover {
+                            background-position:-262px -53px;
+                        }
+                        .b-wid__li .g-icn_star {
+                            display:none;
+                            top:11px;
+                            right:27px;
+                        }
+                            .b-wid__li .g-icn_star:active {
+                                top:12px;
+                            }
+                            .b-wid__li:hover .g-icn_star {
+                                display:block;
+                            }
+                            .b-wid__li_rated .g-icn_star {
+                                display:block;
+                                background-position:-136px -53px;
+                            }
+                            .b-wid__li_rated .g-icn_star:hover {
+                                background-position:-136px 0;
+                            }
+			
+			
+				.b-wid__li_loader{
+					background:url("preloader.gif")!important;
+				}
+                .b-wid__li_playing .b-wid__station {
+                    color:#fff;
+                }
+                .b-wid__li_playing .g-icn_play,
+                .b-wid__li_playing:hover .g-icn_play,
+                .b-wid__li_playing:hover .g-icn_play:hover {
+                    display:block;
+                    background-position:0px -27px;
+                }
+                .b-wid__li_playing .g-icn_star {
+                    display:block;
+                    background-position:-199px 0;
+                }
+                    .b-wid__li_playing .g-icn_star:hover {
+                        background-position:-199px -53px;
+                    }
+                        .b-wid__li_playing.b-wid__li_rated .g-icn_star {
+                            background-position:-198px -53px;
+                        }
+                            .b-wid__li_playing.b-wid__li_rated .g-icn_star:hover {
+                                background-position:-198px 0;
+                            }
+                    .b-wid__li_playing .g-icn_detach,
+                    .b-wid__li_playing .g-icn_detach:hover {
+                        background-position:-262px -26px!important;
+                    }
+                    .g-icn_pause{
+                        background-position-x: -68px!important;
+                    }
+
+                .b-wid__station {
+                    position:relative;
+                    color:#333;
+                }
+                    .b-wid__station span {
+                        position:relative;
+                    }
+                .b-wid__li:hover {
+                    background:#f1f5f9;
+                }
+				.b-wid__li_playing,
+				.b-wid__li_playing:hover {
+					background:#3f7fef;
+				}
+                .b-letter-name {
+                    margin:16px 0 4px 0;
+                    font-size:15px;
+                    font-weight:normal;
+                }
+                .b-letter-subj {
+                    color:#999;
+                }
+                .b-letter-time {
+                    font-size:10px;
+                    color:#ccc;
+                    position:absolute;
+                    top:22px;
+                    right:26px;
+                }
+                    .b-letter-time:after {
+                        content:'';
+                        display:block;
+                        width:15px;
+                        height:13px;
+                        background:url("icns.png") no-repeat 0 -30px;
+                        position:relative;
+                        top:5px;
+                        left:12px;
+                    }
+
+.b-wid__scroll {
+    position:absolute;
+    margin:11px 11px 11px;
+    width:5px;
+    height:100%;
+    right:0;
+    top:0;
+}
+    .b-wid__scroll-slider {
+        position:absolute;
+        width:100%;
+        height:30%;
+        background:rgba(0,0,0, .1);
+    }
+
+
+.b-wid_error:after,
+.b-wid_error_play:after,
+.b-wid_loader:after {
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(255,255,255,.9);
+    z-index:2;
+}
+    .b-wid_loader:after {
+        background:url("loader.gif") no-repeat 50% 50% rgba(255,255,255,.9);
+    }
+	
+    .b-wid-error {
+        display:none;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        line-height: 22px;
+        top: 50%;
+        margin-top: -67px;
+    }
+        .b-wid-error .g-btn {
+            margin:10px 0 0 0;
+        }
+    .b-wid_error .b-wid-error {
+        display:block;
+    }
+    
+.b-wid-error_play{
+    display: none;
+}
+
+.b-wid_error .b-wid-error_play{
+    display: none;
+}
+
+.b-wid_error_play .b-wid-error_play{
+    display: block;
+}

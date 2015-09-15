@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>расширение для погоды</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="b-wid">
+
+        <div class="b-wid-error">
+            Ошибка связи.<br />
+            Проверьте подключение<br />
+            к интернету<br />
+            <button class="g-btn g-btn_grey g-btn_medium">Обновить</button>
+        </div>
+
+        <header class="b-wid__header"><a href="#" class="b-wid__title">Погода</a></header>
+        <ul class="b-wid__list">
+            <li class="w-picture b-wid__li b-wid__li_big b-wid__li_clear">
+                <span class="b-wid__li-txt"></span>
+                <div class="b-degree"></div>
+            </li>
+            <li class="b-wid__li">
+                <span class="b-wid__li-txt"></span>
+                <div class="b-degree"><i class="g-icn g-icn_small_cloudy"></i></div>
+            </li>
+            <li class="b-wid__li">
+                <span class="b-wid__li-txt"></span>
+                <div class="b-degree"><i class="g-icn g-icn_small_cloudy_night"></i></div>
+            </li>
+        </ul>
+    </div>
+	
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/analitics.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+</body>
+</html>

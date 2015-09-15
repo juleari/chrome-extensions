@@ -1,0 +1,12 @@
+html, body, div, pre, p, form, input, dl, dt, dd, ul, li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family:arial;
+}
+li{
+    list-style: none;
+}

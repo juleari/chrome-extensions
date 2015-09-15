@@ -1,0 +1,17 @@
+﻿{
+    "name": {
+        "message": "Rambler-Mail"
+    },
+    "description": {
+        "message": "Notifications on new emails, review topic of the email and sender, quick switch to reading emails."
+    },
+    "title": {
+        "message": "Mail Notification"
+    },
+    "start": {
+        "message": "You have "
+    },
+    "finish": {
+        "message": " unread messages"
+    }
+}
