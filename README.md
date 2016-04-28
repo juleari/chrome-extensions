@@ -1,2 +1,2 @@
 # chrome-extensions
-RAMBLER&Co chrome extensions
+Rambler chrome-extensions and alarm-clock
