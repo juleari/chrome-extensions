@@ -6,3 +6,5 @@ clock/icons/clock.png
 *.pem
 
 *.zip
+
+fs/dev

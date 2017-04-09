@@ -1,0 +1,17 @@
+﻿{
+    "name": {
+        "message": "Figure Skating"
+    },
+    "description": {
+        "message": "Extension about ISU Figure Skating events and skaters"
+    },
+    "events": {
+        "message": "Events"
+    },
+    "skaters": {
+        "message": "Skaters"
+    },
+    "news": {
+        "message": "News"
+    }
+}
