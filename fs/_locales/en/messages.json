@@ -13,5 +13,11 @@
     },
     "news": {
         "message": "News"
+    },
+    "next": {
+        "message": "Next event"
+    },
+    "current": {
+        "message": "Current event"
     }
 }

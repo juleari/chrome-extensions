@@ -1,6 +1,8 @@
 *rambler.json
 clock/icons/clock.png
 
+*.DS_Store
+
 *.crx
 
 *.pem
@@ -8,3 +10,4 @@ clock/icons/clock.png
 *.zip
 
 fs/dev
+
