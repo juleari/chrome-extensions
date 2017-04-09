@@ -19,6 +19,7 @@
     "persistent": true
   },
   "permissions": [
+    "downloads",
     "notifications",
     "tabs",
     "cookies"

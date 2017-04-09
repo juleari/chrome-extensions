@@ -1,9 +1,15 @@
 var Notify = function(text){
-    this.html = webkitNotifications.createNotification(
-        'icons/clock48.png',
-        text ? text : 'будильник',
+    this.html = new Notification(
+        'wake up!!!', 
+        {
+            title: text ? text : 'будильник',
+            icon: 'icons/clock48.png'
+        });
+    /*webkitNotifications.createNotification(
+        ,
+        ,
         "wake up!!!"
-    );
+    );*/
 }
 
 Notify.prototype = {

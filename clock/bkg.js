@@ -8,7 +8,6 @@
             console.log(obj.time);
             setTimeout(function(){
                 var notification = new Notify(obj.text || 'alarm');
-                notification.show();
             }, obj.time)
         });
 
